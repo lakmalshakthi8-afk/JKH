@@ -1,0 +1,10 @@
+﻿2025-09-30T02:24:33.4982270Z ##[group]Run ls -la build/ios/ipa || true
+2025-09-30T02:24:33.4982830Z [36;1mls -la build/ios/ipa || true[0m
+2025-09-30T02:24:33.6318400Z shell: /bin/bash -e {0}
+2025-09-30T02:24:33.6318710Z env:
+2025-09-30T02:24:33.6318930Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:24:33.6320480Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:24:33.6321950Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:24:33.6322310Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:24:33.6322770Z ##[endgroup]
+2025-09-30T02:24:33.7023890Z ls: build/ios/ipa: No such file or directory

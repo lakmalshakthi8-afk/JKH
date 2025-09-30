@@ -1,0 +1,95 @@
+﻿2025-09-30T02:17:19.1165260Z ##[group]Run brew update || true
+2025-09-30T02:17:19.1165780Z [36;1mbrew update || true[0m
+2025-09-30T02:17:19.1166480Z [36;1mbrew install cocoapods || true[0m
+2025-09-30T02:17:19.1309210Z shell: /bin/bash -e {0}
+2025-09-30T02:17:19.1309490Z env:
+2025-09-30T02:17:19.1309830Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:17:19.1311250Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:17:19.1312810Z ##[endgroup]
+2025-09-30T02:17:23.0300520Z [34m==>[0m [1mUpdating Homebrew...[0m
+2025-09-30T02:17:37.3171240Z To restore the stashed changes to /opt/homebrew/Library/Taps/homebrew/homebrew-core, run:
+2025-09-30T02:17:37.3172990Z   cd /opt/homebrew/Library/Taps/homebrew/homebrew-core && git stash pop
+2025-09-30T02:17:39.1884380Z [34m==>[0m [1mHomebrew's analytics have entirely moved to our InfluxDB instance in the EU.[0m
+2025-09-30T02:17:39.1885020Z We gather less data than before and have destroyed all Google Analytics data:
+2025-09-30T02:17:39.1885710Z   [4mhttps://docs.brew.sh/Analytics[24m[0m
+2025-09-30T02:17:39.1886180Z Please reconsider re-enabling analytics to help our volunteer maintainers with:
+2025-09-30T02:17:39.1886590Z   brew analytics on
+2025-09-30T02:17:39.2090860Z [34m==>[0m [1mHomebrew is run entirely by unpaid volunteers. Please consider donating:[0m
+2025-09-30T02:17:39.2092740Z   [4mhttps://github.com/Homebrew/brew#donations[24m
+2025-09-30T02:17:39.2092980Z 
+2025-09-30T02:17:40.4837670Z Updated 4 taps (hashicorp/tap, aws/tap, homebrew/core and homebrew/cask).
+2025-09-30T02:17:40.4846720Z [34m==>[0m [1mNew Formulae[0m
+2025-09-30T02:17:40.8346690Z atomic_queue: C++14 lock-free queues
+2025-09-30T02:17:40.8348480Z doge: Command-line DNS client
+2025-09-30T02:17:40.8351130Z fastmcp: Fast, Pythonic way to build MCP servers and clients
+2025-09-30T02:17:40.8352930Z fernflower: Advanced decompiler for Java bytecode
+2025-09-30T02:17:40.8359970Z jiratui: Textual User Interface for interacting with Atlassian Jira from your shell
+2025-09-30T02:17:40.8365510Z libcpucycles: Microlibrary for counting CPU cycles
+2025-09-30T02:17:40.8372600Z libpq@17: Postgres C API library
+2025-09-30T02:17:40.8377830Z lue-reader: Terminal eBook reader with text-to-speech and multi-format support
+2025-09-30T02:17:40.8380940Z mcp-atlassian: MCP server for Atlassian tools (Confluence, Jira)
+2025-09-30T02:17:40.8384060Z mcp-server-chart: MCP with 25+ @antvis charts for visualization, generation, and analysis
+2025-09-30T02:17:40.8389010Z msedit: Simple text editor with clickable interface
+2025-09-30T02:17:40.8393390Z nanobot: Build MCP Agents
+2025-09-30T02:17:40.8400520Z php-intl: PHP internationalization extension
+2025-09-30T02:17:40.8405670Z postgresql@18: Object-relational database system
+2025-09-30T02:17:40.8432960Z sarif-tools: Set of command-line tools and Python library for working with SARIF files
+2025-09-30T02:17:40.8434010Z slack-mcp-server: Powerful MCP Slack Server with multiple transports and smart history fetch logic
+2025-09-30T02:17:40.8434890Z swag: Automatically generate RESTful API documentation with Swagger 2.0 for Go
+2025-09-30T02:17:40.8435740Z termsvg: Record, share and export your terminal as a animated SVG image
+2025-09-30T02:17:40.8444160Z tfstate-lookup: Lookup resource attributes in tfstate
+2025-09-30T02:17:40.8454860Z wuppiefuzz: Coverage-guided REST API fuzzer developed on top of LibAFL
+2025-09-30T02:17:40.8463850Z zuban: Python language server and type checker, written in Rust
+2025-09-30T02:17:40.8512480Z [34m==>[0m [1mNew Casks[0m
+2025-09-30T02:17:41.0345240Z aionui: GUI for Gemini CLI
+2025-09-30T02:17:41.0347500Z cmd: AI assistant for development in Xcode
+2025-09-30T02:17:41.0348790Z coderabbit: AI code review CLI
+2025-09-30T02:17:41.0349120Z dayflow: Generate a timeline of your day, automatically
+2025-09-30T02:17:41.0349550Z droid: AI-powered software engineering agent by Factory
+2025-09-30T02:17:41.0350260Z folder-preview-pro: Quick Look extension for folders
+2025-09-30T02:17:41.0351190Z font-bbh-sans-bartle
+2025-09-30T02:17:41.0352210Z font-bbh-sans-bogle
+2025-09-30T02:17:41.0353230Z font-bbh-sans-hegarty
+2025-09-30T02:17:41.0359650Z handy: Speech to text application
+2025-09-30T02:17:41.0362280Z helium-browser: Chromium-based web browser
+2025-09-30T02:17:41.0366440Z microsoft-openjdk@25: OpenJDK distribution from Microsoft
+2025-09-30T02:17:41.0371330Z rclone-ui: GUI for Rclone
+2025-09-30T02:17:41.0375350Z rewritebar: AI-powered writing assistant
+2025-09-30T02:17:41.0380250Z topaz-gigapixel: AI image upscaler
+2025-09-30T02:17:41.0384340Z topaz-photo: AI image enhancer
+2025-09-30T02:17:41.0388450Z topaz-video: Video upscaler and quality enhancer
+2025-09-30T02:17:41.0391760Z [34m==>[0m [1mDeleted Installed Formulae[0m
+2025-09-30T02:17:41.0391980Z packer
+2025-09-30T02:17:41.4303200Z [34m==>[0m [1mOutdated Formulae[0m
+2025-09-30T02:17:41.4303450Z gcc
+2025-09-30T02:17:41.4303570Z gh
+2025-09-30T02:17:41.4303660Z git
+2025-09-30T02:17:41.4303810Z harfbuzz
+2025-09-30T02:17:41.4303930Z libnghttp3
+2025-09-30T02:17:41.4304060Z libngtcp2
+2025-09-30T02:17:41.4304170Z libpq
+2025-09-30T02:17:41.4304280Z libunistring
+2025-09-30T02:17:41.4339120Z node@22
+2025-09-30T02:17:41.4339650Z p11-kit
+2025-09-30T02:17:41.4341040Z python@3.12
+2025-09-30T02:17:41.4341220Z swiftformat
+2025-09-30T02:17:41.4341540Z 
+2025-09-30T02:17:41.4341760Z You have [1m12[0m outdated formulae installed.
+2025-09-30T02:17:41.4344270Z You can upgrade them with [1mbrew upgrade[0m
+2025-09-30T02:17:41.4345660Z or list them with [1mbrew outdated[0m.
+2025-09-30T02:17:43.0232730Z [32m==>[0m [1mFetching downloads for: [32mcocoapods[39m[0m
+2025-09-30T02:17:43.0244890Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/cocoapods/manifests/1.16.2_1[0m
+2025-09-30T02:17:43.3625670Z [32m==>[0m [1mFetching dependencies for cocoapods: [32mruby[39m[0m
+2025-09-30T02:17:43.3634510Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ruby/manifests/3.4.6[0m
+2025-09-30T02:17:43.6398700Z [32m==>[0m [1mFetching [32mruby[39m[0m
+2025-09-30T02:17:43.6405010Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ruby/blobs/sha256:8db26d72de0d97182fa05e1cc48f2e86ab03c040831f2087705fc94eb0d067a0[0m
+2025-09-30T02:17:44.5407220Z [32m==>[0m [1mFetching [32mcocoapods[39m[0m
+2025-09-30T02:17:44.5415220Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/cocoapods/blobs/sha256:c0bd1f8e2bdb31e76d8919d8c5181c5ffacab9aa03b9be9cd77c4fcfdd2f0527[0m
+2025-09-30T02:17:44.9667280Z [32m==>[0m [1mInstalling cocoapods dependency: [32mruby[39m[0m
+2025-09-30T02:17:44.9670430Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ruby/manifests/3.4.6[0m
+2025-09-30T02:17:44.9671230Z Already downloaded: /Users/runner/Library/Caches/Homebrew/downloads/296a1b16b76daab9ddb709811f6447e1ff3ac94c5c8bb1c6b7fe34e7f9f86c4d--ruby-3.4.6.bottle_manifest.json
+2025-09-30T02:17:45.0119620Z [34m==>[0m [1mPouring ruby--3.4.6.arm64_sequoia.bottle.tar.gz[0m
+2025-09-30T02:18:01.6384670Z 🍺  /opt/homebrew/Cellar/ruby/3.4.6: 20,686 files, 57.7MB
+2025-09-30T02:18:01.6388910Z [34m==>[0m [1mPouring cocoapods--1.16.2_1.arm64_sequoia.bottle.tar.gz[0m
+2025-09-30T02:18:02.5455850Z 🍺  /opt/homebrew/Cellar/cocoapods/1.16.2_1: 2,276 files, 17.8MB
+2025-09-30T02:18:02.5466180Z [34m==>[0m [1mNo outdated dependents to upgrade![0m

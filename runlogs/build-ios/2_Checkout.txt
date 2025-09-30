@@ -1,0 +1,72 @@
+﻿2025-09-30T02:16:51.7937950Z ##[group]Run actions/checkout@v4
+2025-09-30T02:16:51.7938430Z with:
+2025-09-30T02:16:51.7938660Z   repository: lakmalshakthi8-afk/JKH
+2025-09-30T02:16:51.7939140Z   token: ***
+2025-09-30T02:16:51.7939330Z   ssh-strict: true
+2025-09-30T02:16:51.7939530Z   ssh-user: git
+2025-09-30T02:16:51.7939730Z   persist-credentials: true
+2025-09-30T02:16:51.7939960Z   clean: true
+2025-09-30T02:16:51.7940180Z   sparse-checkout-cone-mode: true
+2025-09-30T02:16:51.7940430Z   fetch-depth: 1
+2025-09-30T02:16:51.7940630Z   fetch-tags: false
+2025-09-30T02:16:51.7940850Z   show-progress: true
+2025-09-30T02:16:51.7941050Z   lfs: false
+2025-09-30T02:16:51.7941240Z   submodules: false
+2025-09-30T02:16:51.7941450Z   set-safe-directory: true
+2025-09-30T02:16:51.7941780Z env:
+2025-09-30T02:16:51.7942000Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:16:51.7942220Z ##[endgroup]
+2025-09-30T02:16:52.1374550Z Syncing repository: lakmalshakthi8-afk/JKH
+2025-09-30T02:16:52.1376050Z ##[group]Getting Git version info
+2025-09-30T02:16:52.1376420Z Working directory is '/Users/runner/work/JKH/JKH'
+2025-09-30T02:16:52.1377010Z [command]/opt/homebrew/bin/git version
+2025-09-30T02:16:52.1917480Z git version 2.50.1
+2025-09-30T02:16:52.1948300Z ##[endgroup]
+2025-09-30T02:16:52.1956200Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/13e43a74-5230-4382-a98a-96b265d1cc76/.gitconfig'
+2025-09-30T02:16:52.1963610Z Temporarily overriding HOME='/Users/runner/work/_temp/13e43a74-5230-4382-a98a-96b265d1cc76' before making global git config changes
+2025-09-30T02:16:52.1964480Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-30T02:16:52.1976100Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/JKH/JKH
+2025-09-30T02:16:52.2090040Z Deleting the contents of '/Users/runner/work/JKH/JKH'
+2025-09-30T02:16:52.2095150Z ##[group]Initializing the repository
+2025-09-30T02:16:52.2100820Z [command]/opt/homebrew/bin/git init /Users/runner/work/JKH/JKH
+2025-09-30T02:16:52.2378200Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-30T02:16:52.2385700Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-30T02:16:52.2386480Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-30T02:16:52.2387100Z hint:
+2025-09-30T02:16:52.2387560Z hint: 	git config --global init.defaultBranch <name>
+2025-09-30T02:16:52.2388000Z hint:
+2025-09-30T02:16:52.2388440Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-30T02:16:52.2389050Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-30T02:16:52.2389520Z hint:
+2025-09-30T02:16:52.2389860Z hint: 	git branch -m <name>
+2025-09-30T02:16:52.2390420Z hint:
+2025-09-30T02:16:52.2390910Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-30T02:16:52.2391650Z Initialized empty Git repository in /Users/runner/work/JKH/JKH/.git/
+2025-09-30T02:16:52.2393050Z [command]/opt/homebrew/bin/git remote add origin https://github.com/lakmalshakthi8-afk/JKH
+2025-09-30T02:16:52.2479080Z ##[endgroup]
+2025-09-30T02:16:52.2479780Z ##[group]Disabling automatic garbage collection
+2025-09-30T02:16:52.2482290Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2025-09-30T02:16:52.2558390Z ##[endgroup]
+2025-09-30T02:16:52.2559090Z ##[group]Setting up auth
+2025-09-30T02:16:52.2564830Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-30T02:16:52.2656630Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-30T02:16:52.3711720Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-30T02:16:52.3965780Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-30T02:16:52.5006440Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-30T02:16:52.5308520Z ##[endgroup]
+2025-09-30T02:16:52.5309380Z ##[group]Fetching the repository
+2025-09-30T02:16:52.5312180Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4ecb76dec1d6760ee75faaac7d8ae8239172d867:refs/remotes/origin/main
+2025-09-30T02:16:54.0798100Z From https://github.com/lakmalshakthi8-afk/JKH
+2025-09-30T02:16:54.0799710Z  * [new ref]         4ecb76dec1d6760ee75faaac7d8ae8239172d867 -> origin/main
+2025-09-30T02:16:54.0955110Z ##[endgroup]
+2025-09-30T02:16:54.0955520Z ##[group]Determining the checkout info
+2025-09-30T02:16:54.0956370Z ##[endgroup]
+2025-09-30T02:16:54.0960520Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2025-09-30T02:16:54.1081880Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-30T02:16:54.1165240Z ##[group]Checking out the ref
+2025-09-30T02:16:54.1172730Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-09-30T02:16:54.4173280Z Switched to a new branch 'main'
+2025-09-30T02:16:54.4177660Z branch 'main' set up to track 'origin/main'.
+2025-09-30T02:16:54.4191060Z ##[endgroup]
+2025-09-30T02:16:54.4344550Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2025-09-30T02:16:54.4439620Z 4ecb76dec1d6760ee75faaac7d8ae8239172d867

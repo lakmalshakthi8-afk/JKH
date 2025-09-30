@@ -8,6 +8,8 @@ import 'package:image/image.dart' as image_lib;
 import 'package:image_picker/image_picker.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
+import 'package:mailer/smtp_server.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:vestaigrade/screens/add_supplier_screen.dart';
@@ -37,6 +39,7 @@ class _NewResultScreenState extends State<NewResultScreen> {
   LibraryModel? library;
   Map supplierData = {};
   final _weightController = TextEditingController();
+  final _secureStorage = const FlutterSecureStorage();
 
   Future<void> _pickImage() async {
     setState(() {
@@ -198,13 +201,20 @@ class _NewResultScreenState extends State<NewResultScreen> {
       final emails = await table.all();
       await db.close();
       await _savetoLibrary();
-      final password = dotenv.env['EMAILPASSWORD'] ??
-          ''; //change the password and user name in the .env file
-      final username = dotenv.env['EMAIL'] ?? '';
+    final password = await _secureStorage.read(key: 'smtp_password') ?? dotenv.env['EMAILPASSWORD'] ?? '';
+    final username = await _secureStorage.read(key: 'smtp_username') ?? dotenv.env['EMAIL'] ?? '';
+    final host = await _secureStorage.read(key: 'smtp_host') ?? dotenv.env['SMTP_HOST'] ?? 'smtp.gmail.com';
+    final portStr = await _secureStorage.read(key: 'smtp_port') ?? dotenv.env['SMTP_PORT'] ?? '587';
+    final port = int.tryParse(portStr) ?? 587;
       if (supplierData.isNotEmpty && library != null && emails.isNotEmpty) {
         final sendTo = emails.map((item) => item['email'] as String).toList();
 // Example: Gmail SMTP (change for other providers)
-        final smtpServer = gmail(username, password);
+        final SmtpServer smtpServer;
+        if (host.contains('gmail')) {
+          smtpServer = gmail(username, password);
+        } else {
+          smtpServer = SmtpServer(host, username: username, password: password, port: port);
+        }
 
         // Build the message
         final message = Message()

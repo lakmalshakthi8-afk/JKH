@@ -1,0 +1,56 @@
+﻿2025-09-30T02:19:24.7658810Z ##[group]Run flutter pub get
+2025-09-30T02:19:24.7664580Z [36;1mflutter pub get[0m
+2025-09-30T02:19:24.7703480Z shell: /bin/bash -e {0}
+2025-09-30T02:19:24.7703760Z env:
+2025-09-30T02:19:24.7704090Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:24.7706040Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:24.7707760Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:24.7708220Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:24.7708490Z ##[endgroup]
+2025-09-30T02:19:29.9944140Z Resolving dependencies...
+2025-09-30T02:19:30.9980680Z Downloading packages...
+2025-09-30T02:19:36.1981050Z   archive 3.6.1 (4.0.7 available)
+2025-09-30T02:19:36.1981420Z   args 2.6.0 (2.7.0 available)
+2025-09-30T02:19:36.1981680Z   camera 0.10.6 (0.11.2 available)
+2025-09-30T02:19:36.1981880Z   camera_android 0.10.9+17 (0.10.10+7 available)
+2025-09-30T02:19:36.1982170Z   camera_avfoundation 0.9.17+5 (0.9.21+4 available)
+2025-09-30T02:19:36.1982570Z   camera_platform_interface 2.8.0 (2.11.0 available)
+2025-09-30T02:19:36.1982840Z   characters 1.4.0 (1.4.1 available)
+2025-09-30T02:19:36.1983100Z   ffi 2.1.3 (2.1.4 available)
+2025-09-30T02:19:36.1983390Z   file_selector_macos 0.9.4+2 (0.9.4+4 available)
+2025-09-30T02:19:36.1983660Z   file_selector_windows 0.9.3+3 (0.9.3+4 available)
+2025-09-30T02:19:36.1983950Z   flutter_lints 5.0.0 (6.0.0 available)
+2025-09-30T02:19:36.1984240Z   flutter_plugin_android_lifecycle 2.0.23 (2.0.30 available)
+2025-09-30T02:19:36.1984580Z   fluttertoast 8.2.10 (9.0.0 available)
+2025-09-30T02:19:36.1984810Z   http 1.2.2 (1.5.0 available)
+2025-09-30T02:19:36.1985060Z   http_parser 4.1.1 (4.1.2 available)
+2025-09-30T02:19:36.1985300Z   image 4.3.0 (4.5.4 available)
+2025-09-30T02:19:36.1985590Z   image_picker 1.1.2 (1.2.0 available)
+2025-09-30T02:19:36.1985840Z   image_picker_android 0.8.12+18 (0.8.13+3 available)
+2025-09-30T02:19:36.1986170Z   image_picker_for_web 3.0.6 (3.1.0 available)
+2025-09-30T02:19:36.1986540Z   image_picker_ios 0.8.12+1 (0.8.13 available)
+2025-09-30T02:19:36.1986810Z   image_picker_linux 0.2.1+1 (0.2.2 available)
+2025-09-30T02:19:36.1987100Z   image_picker_macos 0.2.1+1 (0.2.2 available)
+2025-09-30T02:19:36.1987370Z   image_picker_platform_interface 2.10.0 (2.11.0 available)
+2025-09-30T02:19:36.1987750Z   image_picker_windows 0.2.1+1 (0.2.2 available)
+2025-09-30T02:19:36.1987990Z > leak_tracker 11.0.2 (was 10.0.9)
+2025-09-30T02:19:36.1988250Z > leak_tracker_flutter_testing 3.0.10 (was 3.0.9)
+2025-09-30T02:19:36.1988560Z > leak_tracker_testing 3.0.2 (was 3.0.1)
+2025-09-30T02:19:36.1988810Z   lints 5.1.0 (6.0.0 available)
+2025-09-30T02:19:36.1989070Z   material_color_utilities 0.11.1 (0.13.0 available)
+2025-09-30T02:19:36.1989350Z   meta 1.16.0 (1.17.0 available)
+2025-09-30T02:19:36.1989590Z   path_provider_android 2.2.15 (2.2.18 available)
+2025-09-30T02:19:36.1989850Z   path_provider_foundation 2.4.1 (2.4.2 available)
+2025-09-30T02:19:36.1990200Z   petitparser 6.0.2 (7.0.1 available)
+2025-09-30T02:19:36.1990450Z   rename_app 1.6.1 (1.6.5 available)
+2025-09-30T02:19:36.1990690Z   share_plus 11.0.0 (12.0.0 available)
+2025-09-30T02:19:36.1991020Z   share_plus_platform_interface 6.0.0 (6.1.0 available)
+2025-09-30T02:19:36.1991300Z > test_api 0.7.6 (was 0.7.4) (0.7.7 available)
+2025-09-30T02:19:36.1991530Z > vector_math 2.2.0 (was 2.1.4)
+2025-09-30T02:19:36.1991750Z   vm_service 15.0.0 (15.0.2 available)
+2025-09-30T02:19:36.1992030Z   web 1.1.0 (1.1.1 available)
+2025-09-30T02:19:36.1992240Z   win32 5.13.0 (5.14.0 available)
+2025-09-30T02:19:36.1992470Z   xml 6.5.0 (6.6.1 available)
+2025-09-30T02:19:36.1992660Z Changed 5 dependencies!
+2025-09-30T02:19:36.1995320Z 38 packages have newer versions incompatible with dependency constraints.
+2025-09-30T02:19:36.1996130Z Try `flutter pub outdated` for more information.

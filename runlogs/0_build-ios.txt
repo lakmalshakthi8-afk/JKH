@@ -1,0 +1,508 @@
+﻿2025-09-30T02:16:48.4331200Z Current runner version: '2.328.0'
+2025-09-30T02:16:48.4345450Z ##[group]Runner Image Provisioner
+2025-09-30T02:16:48.4345910Z Hosted Compute Agent
+2025-09-30T02:16:48.4346240Z Version: 20250912.392
+2025-09-30T02:16:48.4346600Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-09-30T02:16:48.4347030Z Build Date: 2025-09-12T15:23:14Z
+2025-09-30T02:16:48.4347380Z ##[endgroup]
+2025-09-30T02:16:48.4347700Z ##[group]Operating System
+2025-09-30T02:16:48.4348040Z macOS
+2025-09-30T02:16:48.4348330Z 15.6.1
+2025-09-30T02:16:48.4348600Z 24G90
+2025-09-30T02:16:48.4348880Z ##[endgroup]
+2025-09-30T02:16:48.4349170Z ##[group]Runner Image
+2025-09-30T02:16:48.4349500Z Image: macos-15-arm64
+2025-09-30T02:16:48.4349810Z Version: 20250922.2357
+2025-09-30T02:16:48.4350470Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20250922.2357/images/macos/macos-15-arm64-Readme.md
+2025-09-30T02:16:48.4351480Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20250922.2357
+2025-09-30T02:16:48.4352070Z ##[endgroup]
+2025-09-30T02:16:48.4352730Z ##[group]GITHUB_TOKEN Permissions
+2025-09-30T02:16:48.4353620Z Contents: read
+2025-09-30T02:16:48.4353920Z Metadata: read
+2025-09-30T02:16:48.4354210Z Packages: read
+2025-09-30T02:16:48.4354510Z ##[endgroup]
+2025-09-30T02:16:48.4355750Z Secret source: Actions
+2025-09-30T02:16:48.4356130Z Prepare workflow directory
+2025-09-30T02:16:48.4631530Z Prepare all required actions
+2025-09-30T02:16:48.4659550Z Getting action download info
+2025-09-30T02:16:48.9710500Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-09-30T02:16:49.3701910Z Download action repository 'ruby/setup-ruby@v1' (SHA:0481980f17b760ef6bca5e8c55809102a0af1e5a)
+2025-09-30T02:16:50.0093750Z Download action repository 'subosito/flutter-action@v2' (SHA:fd55f4c5af5b953cc57a2be44cb082c8f6635e8e)
+2025-09-30T02:16:50.4758660Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-30T02:16:50.7439540Z Getting action download info
+2025-09-30T02:16:50.9339210Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2025-09-30T02:16:51.7444430Z Complete job name: build-ios
+2025-09-30T02:16:51.7938000Z ##[group]Run actions/checkout@v4
+2025-09-30T02:16:51.7938440Z with:
+2025-09-30T02:16:51.7938660Z   repository: lakmalshakthi8-afk/JKH
+2025-09-30T02:16:51.7939140Z   token: ***
+2025-09-30T02:16:51.7939330Z   ssh-strict: true
+2025-09-30T02:16:51.7939530Z   ssh-user: git
+2025-09-30T02:16:51.7939740Z   persist-credentials: true
+2025-09-30T02:16:51.7939960Z   clean: true
+2025-09-30T02:16:51.7940180Z   sparse-checkout-cone-mode: true
+2025-09-30T02:16:51.7940430Z   fetch-depth: 1
+2025-09-30T02:16:51.7940640Z   fetch-tags: false
+2025-09-30T02:16:51.7940850Z   show-progress: true
+2025-09-30T02:16:51.7941050Z   lfs: false
+2025-09-30T02:16:51.7941240Z   submodules: false
+2025-09-30T02:16:51.7941460Z   set-safe-directory: true
+2025-09-30T02:16:51.7941790Z env:
+2025-09-30T02:16:51.7942010Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:16:51.7942220Z ##[endgroup]
+2025-09-30T02:16:52.1374700Z Syncing repository: lakmalshakthi8-afk/JKH
+2025-09-30T02:16:52.1376060Z ##[group]Getting Git version info
+2025-09-30T02:16:52.1376500Z Working directory is '/Users/runner/work/JKH/JKH'
+2025-09-30T02:16:52.1377020Z [command]/opt/homebrew/bin/git version
+2025-09-30T02:16:52.1917560Z git version 2.50.1
+2025-09-30T02:16:52.1948360Z ##[endgroup]
+2025-09-30T02:16:52.1956220Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/13e43a74-5230-4382-a98a-96b265d1cc76/.gitconfig'
+2025-09-30T02:16:52.1963630Z Temporarily overriding HOME='/Users/runner/work/_temp/13e43a74-5230-4382-a98a-96b265d1cc76' before making global git config changes
+2025-09-30T02:16:52.1964490Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-30T02:16:52.1976130Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/JKH/JKH
+2025-09-30T02:16:52.2090110Z Deleting the contents of '/Users/runner/work/JKH/JKH'
+2025-09-30T02:16:52.2095170Z ##[group]Initializing the repository
+2025-09-30T02:16:52.2100850Z [command]/opt/homebrew/bin/git init /Users/runner/work/JKH/JKH
+2025-09-30T02:16:52.2378310Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-30T02:16:52.2385720Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-30T02:16:52.2386490Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-30T02:16:52.2387110Z hint:
+2025-09-30T02:16:52.2387560Z hint: 	git config --global init.defaultBranch <name>
+2025-09-30T02:16:52.2388000Z hint:
+2025-09-30T02:16:52.2388450Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-30T02:16:52.2389060Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-30T02:16:52.2389530Z hint:
+2025-09-30T02:16:52.2389860Z hint: 	git branch -m <name>
+2025-09-30T02:16:52.2390430Z hint:
+2025-09-30T02:16:52.2390920Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-30T02:16:52.2391650Z Initialized empty Git repository in /Users/runner/work/JKH/JKH/.git/
+2025-09-30T02:16:52.2393070Z [command]/opt/homebrew/bin/git remote add origin https://github.com/lakmalshakthi8-afk/JKH
+2025-09-30T02:16:52.2479150Z ##[endgroup]
+2025-09-30T02:16:52.2479810Z ##[group]Disabling automatic garbage collection
+2025-09-30T02:16:52.2482300Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2025-09-30T02:16:52.2558440Z ##[endgroup]
+2025-09-30T02:16:52.2559100Z ##[group]Setting up auth
+2025-09-30T02:16:52.2564850Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-30T02:16:52.2656680Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-30T02:16:52.3711800Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-30T02:16:52.3966600Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-30T02:16:52.5006530Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-30T02:16:52.5308600Z ##[endgroup]
+2025-09-30T02:16:52.5309390Z ##[group]Fetching the repository
+2025-09-30T02:16:52.5312200Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4ecb76dec1d6760ee75faaac7d8ae8239172d867:refs/remotes/origin/main
+2025-09-30T02:16:54.0798150Z From https://github.com/lakmalshakthi8-afk/JKH
+2025-09-30T02:16:54.0799770Z  * [new ref]         4ecb76dec1d6760ee75faaac7d8ae8239172d867 -> origin/main
+2025-09-30T02:16:54.0955170Z ##[endgroup]
+2025-09-30T02:16:54.0955530Z ##[group]Determining the checkout info
+2025-09-30T02:16:54.0956370Z ##[endgroup]
+2025-09-30T02:16:54.0960530Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2025-09-30T02:16:54.1081950Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-30T02:16:54.1165280Z ##[group]Checking out the ref
+2025-09-30T02:16:54.1172750Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-09-30T02:16:54.4173370Z Switched to a new branch 'main'
+2025-09-30T02:16:54.4177690Z branch 'main' set up to track 'origin/main'.
+2025-09-30T02:16:54.4191100Z ##[endgroup]
+2025-09-30T02:16:54.4344580Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2025-09-30T02:16:54.4439670Z 4ecb76dec1d6760ee75faaac7d8ae8239172d867
+2025-09-30T02:16:54.4693960Z ##[group]Run ruby/setup-ruby@v1
+2025-09-30T02:16:54.4694230Z with:
+2025-09-30T02:16:54.4694360Z   ruby-version: 2.7
+2025-09-30T02:16:54.4694490Z   bundler-cache: false
+2025-09-30T02:16:54.4694890Z env:
+2025-09-30T02:16:54.4695010Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:16:54.4695150Z ##[endgroup]
+2025-09-30T02:16:54.6567360Z ##[group]Modifying PATH
+2025-09-30T02:16:54.6575330Z Entries removed from PATH to avoid conflicts with default Ruby:
+2025-09-30T02:16:54.6579140Z   /opt/homebrew/lib/ruby/gems/3.3.0/bin
+2025-09-30T02:16:54.6579770Z   /opt/homebrew/opt/ruby@3.3/bin
+2025-09-30T02:16:54.6584230Z Entries added to PATH to use selected Ruby:
+2025-09-30T02:16:54.6584880Z   /Users/runner/hostedtoolcache/Ruby/2.7.8/arm64/bin
+2025-09-30T02:16:54.6593290Z ##[endgroup]
+2025-09-30T02:16:54.6609360Z ##[group]Downloading Ruby
+2025-09-30T02:16:54.6610570Z https://github.com/ruby/ruby-builder/releases/download/ruby-2.7.8/ruby-2.7.8-darwin-arm64.tar.gz
+2025-09-30T02:16:55.1138640Z Took   0.44 seconds
+2025-09-30T02:16:55.1244460Z ##[endgroup]
+2025-09-30T02:16:55.1349490Z ##[group]Extracting  Ruby
+2025-09-30T02:16:55.1451900Z [command]/usr/bin/tar -xz -C /Users/runner/hostedtoolcache/Ruby/2.7.8 -f /Users/runner/work/_temp/cb1625d4-f268-4b98-a6f5-f7ee6f59056a
+2025-09-30T02:16:55.8102830Z Took   0.71 seconds
+2025-09-30T02:16:55.8104670Z ##[endgroup]
+2025-09-30T02:16:55.8105440Z ##[group]Print Ruby version
+2025-09-30T02:16:55.8126030Z [command]/Users/runner/hostedtoolcache/Ruby/2.7.8/arm64/bin/ruby --version
+2025-09-30T02:16:55.8215220Z ruby 2.7.8p225 (2023-03-30 revision 1f4d455848) [arm64-darwin22]
+2025-09-30T02:16:55.8226020Z Took   0.01 seconds
+2025-09-30T02:16:55.8227110Z ##[endgroup]
+2025-09-30T02:16:55.8228120Z ##[group]Installing Bundler
+2025-09-30T02:16:55.8228980Z Using latest Bundler for ruby-2.7.8 because the default Bundler gem is too old for that Ruby version
+2025-09-30T02:16:55.8230090Z Ruby 2.6-2.7 only works with Bundler 2.4
+2025-09-30T02:16:55.8235270Z [command]/Users/runner/hostedtoolcache/Ruby/2.7.8/arm64/bin/gem install bundler -v ~> 2.4.0
+2025-09-30T02:17:18.9130770Z Successfully installed bundler-2.4.22
+2025-09-30T02:17:18.9232850Z 1 gem installed
+2025-09-30T02:17:19.0777100Z Took  23.25 seconds
+2025-09-30T02:17:19.0859770Z ##[endgroup]
+2025-09-30T02:17:19.1165300Z ##[group]Run brew update || true
+2025-09-30T02:17:19.1165780Z [36;1mbrew update || true[0m
+2025-09-30T02:17:19.1166490Z [36;1mbrew install cocoapods || true[0m
+2025-09-30T02:17:19.1309230Z shell: /bin/bash -e {0}
+2025-09-30T02:17:19.1309490Z env:
+2025-09-30T02:17:19.1309840Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:17:19.1311330Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:17:19.1312810Z ##[endgroup]
+2025-09-30T02:17:23.0300620Z [34m==>[0m [1mUpdating Homebrew...[0m
+2025-09-30T02:17:37.3172020Z To restore the stashed changes to /opt/homebrew/Library/Taps/homebrew/homebrew-core, run:
+2025-09-30T02:17:37.3172990Z   cd /opt/homebrew/Library/Taps/homebrew/homebrew-core && git stash pop
+2025-09-30T02:17:39.1884430Z [34m==>[0m [1mHomebrew's analytics have entirely moved to our InfluxDB instance in the EU.[0m
+2025-09-30T02:17:39.1885020Z We gather less data than before and have destroyed all Google Analytics data:
+2025-09-30T02:17:39.1885720Z   [4mhttps://docs.brew.sh/Analytics[24m[0m
+2025-09-30T02:17:39.1886180Z Please reconsider re-enabling analytics to help our volunteer maintainers with:
+2025-09-30T02:17:39.1886600Z   brew analytics on
+2025-09-30T02:17:39.2090940Z [34m==>[0m [1mHomebrew is run entirely by unpaid volunteers. Please consider donating:[0m
+2025-09-30T02:17:39.2092760Z   [4mhttps://github.com/Homebrew/brew#donations[24m
+2025-09-30T02:17:39.2092980Z 
+2025-09-30T02:17:40.4837710Z Updated 4 taps (hashicorp/tap, aws/tap, homebrew/core and homebrew/cask).
+2025-09-30T02:17:40.4846740Z [34m==>[0m [1mNew Formulae[0m
+2025-09-30T02:17:40.8346790Z atomic_queue: C++14 lock-free queues
+2025-09-30T02:17:40.8348490Z doge: Command-line DNS client
+2025-09-30T02:17:40.8351140Z fastmcp: Fast, Pythonic way to build MCP servers and clients
+2025-09-30T02:17:40.8352960Z fernflower: Advanced decompiler for Java bytecode
+2025-09-30T02:17:40.8360920Z jiratui: Textual User Interface for interacting with Atlassian Jira from your shell
+2025-09-30T02:17:40.8365520Z libcpucycles: Microlibrary for counting CPU cycles
+2025-09-30T02:17:40.8372610Z libpq@17: Postgres C API library
+2025-09-30T02:17:40.8377850Z lue-reader: Terminal eBook reader with text-to-speech and multi-format support
+2025-09-30T02:17:40.8380950Z mcp-atlassian: MCP server for Atlassian tools (Confluence, Jira)
+2025-09-30T02:17:40.8384060Z mcp-server-chart: MCP with 25+ @antvis charts for visualization, generation, and analysis
+2025-09-30T02:17:40.8389030Z msedit: Simple text editor with clickable interface
+2025-09-30T02:17:40.8393400Z nanobot: Build MCP Agents
+2025-09-30T02:17:40.8400550Z php-intl: PHP internationalization extension
+2025-09-30T02:17:40.8405690Z postgresql@18: Object-relational database system
+2025-09-30T02:17:40.8432990Z sarif-tools: Set of command-line tools and Python library for working with SARIF files
+2025-09-30T02:17:40.8434020Z slack-mcp-server: Powerful MCP Slack Server with multiple transports and smart history fetch logic
+2025-09-30T02:17:40.8434900Z swag: Automatically generate RESTful API documentation with Swagger 2.0 for Go
+2025-09-30T02:17:40.8435740Z termsvg: Record, share and export your terminal as a animated SVG image
+2025-09-30T02:17:40.8444160Z tfstate-lookup: Lookup resource attributes in tfstate
+2025-09-30T02:17:40.8454890Z wuppiefuzz: Coverage-guided REST API fuzzer developed on top of LibAFL
+2025-09-30T02:17:40.8463850Z zuban: Python language server and type checker, written in Rust
+2025-09-30T02:17:40.8512550Z [34m==>[0m [1mNew Casks[0m
+2025-09-30T02:17:41.0345270Z aionui: GUI for Gemini CLI
+2025-09-30T02:17:41.0348470Z cmd: AI assistant for development in Xcode
+2025-09-30T02:17:41.0348790Z coderabbit: AI code review CLI
+2025-09-30T02:17:41.0349120Z dayflow: Generate a timeline of your day, automatically
+2025-09-30T02:17:41.0349550Z droid: AI-powered software engineering agent by Factory
+2025-09-30T02:17:41.0350270Z folder-preview-pro: Quick Look extension for folders
+2025-09-30T02:17:41.0351200Z font-bbh-sans-bartle
+2025-09-30T02:17:41.0352220Z font-bbh-sans-bogle
+2025-09-30T02:17:41.0353230Z font-bbh-sans-hegarty
+2025-09-30T02:17:41.0359650Z handy: Speech to text application
+2025-09-30T02:17:41.0362290Z helium-browser: Chromium-based web browser
+2025-09-30T02:17:41.0366440Z microsoft-openjdk@25: OpenJDK distribution from Microsoft
+2025-09-30T02:17:41.0371340Z rclone-ui: GUI for Rclone
+2025-09-30T02:17:41.0375350Z rewritebar: AI-powered writing assistant
+2025-09-30T02:17:41.0380250Z topaz-gigapixel: AI image upscaler
+2025-09-30T02:17:41.0384340Z topaz-photo: AI image enhancer
+2025-09-30T02:17:41.0388450Z topaz-video: Video upscaler and quality enhancer
+2025-09-30T02:17:41.0391780Z [34m==>[0m [1mDeleted Installed Formulae[0m
+2025-09-30T02:17:41.0391980Z packer
+2025-09-30T02:17:41.4303230Z [34m==>[0m [1mOutdated Formulae[0m
+2025-09-30T02:17:41.4303450Z gcc
+2025-09-30T02:17:41.4303570Z gh
+2025-09-30T02:17:41.4303660Z git
+2025-09-30T02:17:41.4303820Z harfbuzz
+2025-09-30T02:17:41.4303930Z libnghttp3
+2025-09-30T02:17:41.4304060Z libngtcp2
+2025-09-30T02:17:41.4304170Z libpq
+2025-09-30T02:17:41.4304280Z libunistring
+2025-09-30T02:17:41.4339160Z node@22
+2025-09-30T02:17:41.4339650Z p11-kit
+2025-09-30T02:17:41.4341040Z python@3.12
+2025-09-30T02:17:41.4341220Z swiftformat
+2025-09-30T02:17:41.4341540Z 
+2025-09-30T02:17:41.4341760Z You have [1m12[0m outdated formulae installed.
+2025-09-30T02:17:41.4344280Z You can upgrade them with [1mbrew upgrade[0m
+2025-09-30T02:17:41.4345670Z or list them with [1mbrew outdated[0m.
+2025-09-30T02:17:43.0232770Z [32m==>[0m [1mFetching downloads for: [32mcocoapods[39m[0m
+2025-09-30T02:17:43.0244900Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/cocoapods/manifests/1.16.2_1[0m
+2025-09-30T02:17:43.3625700Z [32m==>[0m [1mFetching dependencies for cocoapods: [32mruby[39m[0m
+2025-09-30T02:17:43.3634520Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ruby/manifests/3.4.6[0m
+2025-09-30T02:17:43.6398730Z [32m==>[0m [1mFetching [32mruby[39m[0m
+2025-09-30T02:17:43.6405020Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ruby/blobs/sha256:8db26d72de0d97182fa05e1cc48f2e86ab03c040831f2087705fc94eb0d067a0[0m
+2025-09-30T02:17:44.5407250Z [32m==>[0m [1mFetching [32mcocoapods[39m[0m
+2025-09-30T02:17:44.5415230Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/cocoapods/blobs/sha256:c0bd1f8e2bdb31e76d8919d8c5181c5ffacab9aa03b9be9cd77c4fcfdd2f0527[0m
+2025-09-30T02:17:44.9667310Z [32m==>[0m [1mInstalling cocoapods dependency: [32mruby[39m[0m
+2025-09-30T02:17:44.9670430Z [34m==>[0m [1mDownloading https://ghcr.io/v2/homebrew/core/ruby/manifests/3.4.6[0m
+2025-09-30T02:17:44.9671250Z Already downloaded: /Users/runner/Library/Caches/Homebrew/downloads/296a1b16b76daab9ddb709811f6447e1ff3ac94c5c8bb1c6b7fe34e7f9f86c4d--ruby-3.4.6.bottle_manifest.json
+2025-09-30T02:17:45.0119650Z [34m==>[0m [1mPouring ruby--3.4.6.arm64_sequoia.bottle.tar.gz[0m
+2025-09-30T02:18:01.6384710Z 🍺  /opt/homebrew/Cellar/ruby/3.4.6: 20,686 files, 57.7MB
+2025-09-30T02:18:01.6388920Z [34m==>[0m [1mPouring cocoapods--1.16.2_1.arm64_sequoia.bottle.tar.gz[0m
+2025-09-30T02:18:02.5455920Z 🍺  /opt/homebrew/Cellar/cocoapods/1.16.2_1: 2,276 files, 17.8MB
+2025-09-30T02:18:02.5466210Z [34m==>[0m [1mNo outdated dependents to upgrade![0m
+2025-09-30T02:18:02.5957030Z ##[group]Run subosito/flutter-action@v2
+2025-09-30T02:18:02.5957330Z with:
+2025-09-30T02:18:02.5957500Z   channel: stable
+2025-09-30T02:18:02.5957620Z   architecture: ARM64
+2025-09-30T02:18:02.5957750Z   cache: false
+2025-09-30T02:18:02.5957870Z   pub-cache-path: default
+2025-09-30T02:18:02.5958120Z   dry-run: false
+2025-09-30T02:18:02.5958370Z   git-source: https://github.com/flutter/flutter.git
+2025-09-30T02:18:02.5958730Z env:
+2025-09-30T02:18:02.5958910Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:18:02.5960240Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:18:02.5961610Z ##[endgroup]
+2025-09-30T02:18:02.6036780Z ##[group]Run chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+2025-09-30T02:18:02.6037160Z [36;1mchmod +x "$GITHUB_ACTION_PATH/setup.sh"[0m
+2025-09-30T02:18:02.6198790Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-30T02:18:02.6199030Z env:
+2025-09-30T02:18:02.6199260Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:18:02.6200530Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:18:02.6201880Z ##[endgroup]
+2025-09-30T02:18:02.6912340Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh -p \
+2025-09-30T02:18:02.6912830Z [36;1m$GITHUB_ACTION_PATH/setup.sh -p \[0m
+2025-09-30T02:18:02.6913120Z [36;1m  -n '' \[0m
+2025-09-30T02:18:02.6913370Z [36;1m  -f '' \[0m
+2025-09-30T02:18:02.6913610Z [36;1m  -a 'ARM64' \[0m
+2025-09-30T02:18:02.6913930Z [36;1m  -k '' \[0m
+2025-09-30T02:18:02.6914140Z [36;1m  -c '' \[0m
+2025-09-30T02:18:02.6914480Z [36;1m  -l '' \[0m
+2025-09-30T02:18:02.6915340Z [36;1m  -d 'default' \[0m
+2025-09-30T02:18:02.6915650Z [36;1m  -g 'https://github.com/flutter/flutter.git' \[0m
+2025-09-30T02:18:02.6916010Z [36;1m  stable[0m
+2025-09-30T02:18:02.7193840Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-30T02:18:02.7194230Z env:
+2025-09-30T02:18:02.7194370Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:18:02.7195730Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:18:02.7197200Z ##[endgroup]
+2025-09-30T02:18:03.5014860Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh \
+2025-09-30T02:18:03.5015150Z [36;1m$GITHUB_ACTION_PATH/setup.sh \[0m
+2025-09-30T02:18:03.5015370Z [36;1m  -n '3.35.5' \[0m
+2025-09-30T02:18:03.5015530Z [36;1m  -a 'arm64' \[0m
+2025-09-30T02:18:03.5015800Z [36;1m  -c '/Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64' \[0m
+2025-09-30T02:18:03.5016090Z [36;1m  -d '/Users/runner/.pub-cache' \[0m
+2025-09-30T02:18:03.5016280Z [36;1m  stable[0m
+2025-09-30T02:18:03.5049120Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-30T02:18:03.5049360Z env:
+2025-09-30T02:18:03.5049490Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:18:03.5051190Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:18:03.5052560Z ##[endgroup]
+2025-09-30T02:18:04.1656620Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-09-30T02:18:04.1657050Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-09-30T02:18:04.1657240Z 
+2025-09-30T02:18:04.5365410Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-09-30T02:18:05.5380920Z   0 1990M    0 83338    0     0   219k      0  2:34:49 --:--:--  2:34:49  219k
+2025-09-30T02:18:06.5369000Z   1 1990M    1 35.7M    0     0  26.0M      0  0:01:16  0:00:01  0:01:15 26.0M
+2025-09-30T02:18:07.5370080Z   4 1990M    4 89.2M    0     0  37.6M      0  0:00:52  0:00:02  0:00:50 37.6M
+2025-09-30T02:18:08.5405530Z   7 1990M    7  140M    0     0  41.6M      0  0:00:47  0:00:03  0:00:44 41.5M
+2025-09-30T02:18:09.5394680Z   9 1990M    9  190M    0     0  43.5M      0  0:00:45  0:00:04  0:00:41 43.5M
+2025-09-30T02:18:10.5369940Z  12 1990M   12  245M    0     0  45.6M      0  0:00:43  0:00:05  0:00:38 49.0M
+2025-09-30T02:18:11.5363070Z  15 1990M   15  300M    0     0  47.0M      0  0:00:42  0:00:06  0:00:36 52.8M
+2025-09-30T02:18:12.5380150Z  17 1990M   17  353M    0     0  47.9M      0  0:00:41  0:00:07  0:00:34 52.9M
+2025-09-30T02:18:13.5525990Z  20 1990M   20  405M    0     0  48.3M      0  0:00:41  0:00:08  0:00:33 52.9M
+2025-09-30T02:18:14.5364080Z  22 1990M   22  453M    0     0  48.3M      0  0:00:41  0:00:09  0:00:32 52.4M
+2025-09-30T02:18:15.5367680Z  25 1990M   25  506M    0     0  48.8M      0  0:00:40  0:00:10  0:00:30 52.1M
+2025-09-30T02:18:16.5366640Z  28 1990M   28  560M    0     0  49.3M      0  0:00:40  0:00:11  0:00:29 52.1M
+2025-09-30T02:18:17.5377630Z  30 1990M   30  615M    0     0  49.7M      0  0:00:39  0:00:12  0:00:27 52.4M
+2025-09-30T02:18:18.5416100Z  33 1990M   33  671M    0     0  50.2M      0  0:00:39  0:00:13  0:00:26 53.2M
+2025-09-30T02:18:19.5378310Z  36 1990M   36  726M    0     0  50.5M      0  0:00:39  0:00:14  0:00:25 54.7M
+2025-09-30T02:18:20.5364430Z  39 1990M   39  781M    0     0  50.8M      0  0:00:39  0:00:15  0:00:24 54.9M
+2025-09-30T02:18:21.5363520Z  41 1990M   41  835M    0     0  51.0M      0  0:00:39  0:00:16  0:00:23 54.9M
+2025-09-30T02:18:22.5604860Z  44 1990M   44  883M    0     0  50.8M      0  0:00:39  0:00:17  0:00:22 53.4M
+2025-09-30T02:18:23.5365000Z  46 1990M   46  924M    0     0  50.2M      0  0:00:39  0:00:18  0:00:21 50.4M
+2025-09-30T02:18:24.5368520Z  49 1990M   49  976M    0     0  50.4M      0  0:00:39  0:00:19  0:00:20 50.1M
+2025-09-30T02:18:25.5367670Z  51 1990M   51 1024M    0     0  50.2M      0  0:00:39  0:00:20  0:00:19 48.6M
+2025-09-30T02:18:26.5366260Z  53 1990M   53 1070M    0     0  50.0M      0  0:00:39  0:00:21  0:00:18 46.9M
+2025-09-30T02:18:27.5387290Z  56 1990M   56 1124M    0     0  50.2M      0  0:00:39  0:00:22  0:00:17 48.2M
+2025-09-30T02:18:28.5394830Z  59 1990M   59 1176M    0     0  50.3M      0  0:00:39  0:00:23  0:00:16 50.6M
+2025-09-30T02:18:29.5364820Z  61 1990M   61 1231M    0     0  50.5M      0  0:00:39  0:00:24  0:00:15 50.9M
+2025-09-30T02:18:30.5367470Z  64 1990M   64 1287M    0     0  50.7M      0  0:00:39  0:00:25  0:00:14 52.6M
+2025-09-30T02:18:31.5370340Z  66 1990M   66 1332M    0     0  50.5M      0  0:00:39  0:00:26  0:00:13 52.4M
+2025-09-30T02:18:32.5369750Z  69 1990M   69 1379M    0     0  50.3M      0  0:00:39  0:00:27  0:00:12 51.0M
+2025-09-30T02:18:33.5372230Z  71 1990M   71 1430M    0     0  50.4M      0  0:00:39  0:00:28  0:00:11 50.7M
+2025-09-30T02:18:34.5363650Z  74 1990M   74 1478M    0     0  50.3M      0  0:00:39  0:00:29  0:00:10 49.3M
+2025-09-30T02:18:35.5367000Z  77 1990M   77 1533M    0     0  50.4M      0  0:00:39  0:00:30  0:00:09 49.2M
+2025-09-30T02:18:36.5392030Z  79 1990M   79 1587M    0     0  50.6M      0  0:00:39  0:00:31  0:00:08 51.0M
+2025-09-30T02:18:37.5369160Z  82 1990M   82 1643M    0     0  50.7M      0  0:00:39  0:00:32  0:00:07 52.7M
+2025-09-30T02:18:38.5372780Z  85 1990M   85 1693M    0     0  50.7M      0  0:00:39  0:00:33  0:00:06 52.6M
+2025-09-30T02:18:39.5367940Z  87 1990M   87 1748M    0     0  50.8M      0  0:00:39  0:00:34  0:00:05 53.9M
+2025-09-30T02:18:40.5372150Z  90 1990M   90 1802M    0     0  50.9M      0  0:00:39  0:00:35  0:00:04 53.8M
+2025-09-30T02:18:41.5509740Z  92 1990M   92 1849M    0     0  50.8M      0  0:00:39  0:00:36  0:00:03 52.3M
+2025-09-30T02:18:42.5368800Z  95 1990M   95 1903M    0     0  50.9M      0  0:00:39  0:00:37  0:00:02 51.8M
+2025-09-30T02:18:43.1243540Z  98 1990M   98 1958M    0     0  51.0M      0  0:00:39  0:00:38  0:00:01 52.9M
+2025-09-30T02:18:43.1255140Z 100 1990M  100 1990M    0     0  51.0M      0  0:00:38  0:00:38 --:--:-- 52.8M
+2025-09-30T02:19:24.0772540Z ##[group]Run flutter --version
+2025-09-30T02:19:24.0772970Z [36;1mflutter --version[0m
+2025-09-30T02:19:24.1192620Z shell: /bin/bash -e {0}
+2025-09-30T02:19:24.1192970Z env:
+2025-09-30T02:19:24.1193180Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:24.1194770Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:24.1196430Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:24.1196880Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:24.1197120Z ##[endgroup]
+2025-09-30T02:19:24.7553770Z Flutter 3.35.5 • channel stable • https://github.com/flutter/flutter.git
+2025-09-30T02:19:24.7627170Z Framework • revision ac4e799d23 (3 days ago) • 2025-09-26 12:05:09 -0700
+2025-09-30T02:19:24.7628300Z Engine • hash 0274ead41f6265309f36e9d74bc8c559becd5345 (revision d3d45dcf25) (3 days ago) • 2025-09-26 16:45:18.000Z
+2025-09-30T02:19:24.7628810Z Tools • Dart 3.9.2 • DevTools 2.48.0
+2025-09-30T02:19:24.7658820Z ##[group]Run flutter pub get
+2025-09-30T02:19:24.7664580Z [36;1mflutter pub get[0m
+2025-09-30T02:19:24.7703490Z shell: /bin/bash -e {0}
+2025-09-30T02:19:24.7703760Z env:
+2025-09-30T02:19:24.7704090Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:24.7706060Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:24.7707760Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:24.7708220Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:24.7708490Z ##[endgroup]
+2025-09-30T02:19:29.9944200Z Resolving dependencies...
+2025-09-30T02:19:30.9980790Z Downloading packages...
+2025-09-30T02:19:36.1981090Z   archive 3.6.1 (4.0.7 available)
+2025-09-30T02:19:36.1981420Z   args 2.6.0 (2.7.0 available)
+2025-09-30T02:19:36.1981680Z   camera 0.10.6 (0.11.2 available)
+2025-09-30T02:19:36.1981880Z   camera_android 0.10.9+17 (0.10.10+7 available)
+2025-09-30T02:19:36.1982170Z   camera_avfoundation 0.9.17+5 (0.9.21+4 available)
+2025-09-30T02:19:36.1982570Z   camera_platform_interface 2.8.0 (2.11.0 available)
+2025-09-30T02:19:36.1982840Z   characters 1.4.0 (1.4.1 available)
+2025-09-30T02:19:36.1983100Z   ffi 2.1.3 (2.1.4 available)
+2025-09-30T02:19:36.1983390Z   file_selector_macos 0.9.4+2 (0.9.4+4 available)
+2025-09-30T02:19:36.1983660Z   file_selector_windows 0.9.3+3 (0.9.3+4 available)
+2025-09-30T02:19:36.1983950Z   flutter_lints 5.0.0 (6.0.0 available)
+2025-09-30T02:19:36.1984240Z   flutter_plugin_android_lifecycle 2.0.23 (2.0.30 available)
+2025-09-30T02:19:36.1984580Z   fluttertoast 8.2.10 (9.0.0 available)
+2025-09-30T02:19:36.1984840Z   http 1.2.2 (1.5.0 available)
+2025-09-30T02:19:36.1985060Z   http_parser 4.1.1 (4.1.2 available)
+2025-09-30T02:19:36.1985360Z   image 4.3.0 (4.5.4 available)
+2025-09-30T02:19:36.1985590Z   image_picker 1.1.2 (1.2.0 available)
+2025-09-30T02:19:36.1985840Z   image_picker_android 0.8.12+18 (0.8.13+3 available)
+2025-09-30T02:19:36.1986170Z   image_picker_for_web 3.0.6 (3.1.0 available)
+2025-09-30T02:19:36.1986540Z   image_picker_ios 0.8.12+1 (0.8.13 available)
+2025-09-30T02:19:36.1986820Z   image_picker_linux 0.2.1+1 (0.2.2 available)
+2025-09-30T02:19:36.1987100Z   image_picker_macos 0.2.1+1 (0.2.2 available)
+2025-09-30T02:19:36.1987380Z   image_picker_platform_interface 2.10.0 (2.11.0 available)
+2025-09-30T02:19:36.1987750Z   image_picker_windows 0.2.1+1 (0.2.2 available)
+2025-09-30T02:19:36.1988000Z > leak_tracker 11.0.2 (was 10.0.9)
+2025-09-30T02:19:36.1988250Z > leak_tracker_flutter_testing 3.0.10 (was 3.0.9)
+2025-09-30T02:19:36.1988560Z > leak_tracker_testing 3.0.2 (was 3.0.1)
+2025-09-30T02:19:36.1988820Z   lints 5.1.0 (6.0.0 available)
+2025-09-30T02:19:36.1989070Z   material_color_utilities 0.11.1 (0.13.0 available)
+2025-09-30T02:19:36.1989350Z   meta 1.16.0 (1.17.0 available)
+2025-09-30T02:19:36.1989590Z   path_provider_android 2.2.15 (2.2.18 available)
+2025-09-30T02:19:36.1989850Z   path_provider_foundation 2.4.1 (2.4.2 available)
+2025-09-30T02:19:36.1990200Z   petitparser 6.0.2 (7.0.1 available)
+2025-09-30T02:19:36.1990460Z   rename_app 1.6.1 (1.6.5 available)
+2025-09-30T02:19:36.1990690Z   share_plus 11.0.0 (12.0.0 available)
+2025-09-30T02:19:36.1991020Z   share_plus_platform_interface 6.0.0 (6.1.0 available)
+2025-09-30T02:19:36.1991300Z > test_api 0.7.6 (was 0.7.4) (0.7.7 available)
+2025-09-30T02:19:36.1991540Z > vector_math 2.2.0 (was 2.1.4)
+2025-09-30T02:19:36.1991760Z   vm_service 15.0.0 (15.0.2 available)
+2025-09-30T02:19:36.1992030Z   web 1.1.0 (1.1.1 available)
+2025-09-30T02:19:36.1992240Z   win32 5.13.0 (5.14.0 available)
+2025-09-30T02:19:36.1992470Z   xml 6.5.0 (6.6.1 available)
+2025-09-30T02:19:36.1993440Z Changed 5 dependencies!
+2025-09-30T02:19:36.1995330Z 38 packages have newer versions incompatible with dependency constraints.
+2025-09-30T02:19:36.1996130Z Try `flutter pub outdated` for more information.
+2025-09-30T02:19:36.9831290Z ##[group]Run # Ensure CocoaPods repo is available
+2025-09-30T02:19:36.9831680Z [36;1m# Ensure CocoaPods repo is available[0m
+2025-09-30T02:19:36.9831940Z [36;1mpod --version || sudo gem install cocoapods[0m
+2025-09-30T02:19:36.9832220Z [36;1mpod repo update || true[0m
+2025-09-30T02:19:37.0753720Z shell: /bin/bash -e {0}
+2025-09-30T02:19:37.0754030Z env:
+2025-09-30T02:19:37.0754170Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:37.0755460Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:37.0757050Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:37.0757360Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:37.0757540Z ##[endgroup]
+2025-09-30T02:19:37.9721530Z 1.16.2
+2025-09-30T02:19:39.5081850Z ##[group]Run # Build an unsigned IPA and an Xcode archive. `--no-codesign` allows building without credentials.
+2025-09-30T02:19:39.5083360Z [36;1m# Build an unsigned IPA and an Xcode archive. `--no-codesign` allows building without credentials.[0m
+2025-09-30T02:19:39.5084630Z [36;1mflutter build ipa --no-codesign --export-method ad-hoc --build-number=1 --build-name=1.0.0[0m
+2025-09-30T02:19:39.5162600Z shell: /bin/bash -e {0}
+2025-09-30T02:19:39.5162840Z env:
+2025-09-30T02:19:39.5163020Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:39.5164510Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:39.5175490Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:39.5175770Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:39.5175940Z ##[endgroup]
+2025-09-30T02:19:39.9771470Z Warning: Building for device with codesigning disabled. You will have to manually codesign before deploying to device.
+2025-09-30T02:19:46.3510750Z Archiving com.example.tfclassification...
+2025-09-30T02:19:46.4054520Z Updating minimum iOS deployment target to 13.0.
+2025-09-30T02:19:46.4156580Z Upgrading project.pbxproj
+2025-09-30T02:19:46.4258010Z Upgrading AppFrameworkInfo.plist
+2025-09-30T02:19:46.4375110Z Upgrading Podfile
+2025-09-30T02:19:46.4476690Z Upgrading Runner.xcscheme
+2025-09-30T02:23:22.2893600Z Running pod install...                                            214.5s
+2025-09-30T02:24:32.4489040Z Running Xcode build...                                          
+2025-09-30T02:24:32.4494650Z Xcode archive done.                                         70.1s
+2025-09-30T02:24:33.3653250Z ✓ Built build/ios/archive/Runner.xcarchive (183.5MB)
+2025-09-30T02:24:33.4607050Z 
+2025-09-30T02:24:33.4608310Z [!] App Settings Validation
+2025-09-30T02:24:33.4611580Z     • Version Number: 1.0.0
+2025-09-30T02:24:33.4612510Z     • Build Number: 1
+2025-09-30T02:24:33.4613590Z     • Display Name: Vestaigrade
+2025-09-30T02:24:33.4614550Z     • Deployment Target: 13.0
+2025-09-30T02:24:33.4615520Z     • Bundle Identifier: com.example.tfclassification
+2025-09-30T02:24:33.4616930Z     ! Your application still contains the default "com.example" bundle identifier.
+2025-09-30T02:24:33.4617750Z 
+2025-09-30T02:24:33.4618280Z [!] App Icon and Launch Image Assets Validation
+2025-09-30T02:24:33.4648060Z     ! Launch image is set to the default placeholder icon. Replace with unique launch image.
+2025-09-30T02:24:33.4648420Z 
+2025-09-30T02:24:33.4649170Z To update the settings, please refer to https://flutter.dev/to/ios-deploy
+2025-09-30T02:24:33.4649400Z 
+2025-09-30T02:24:33.4649600Z Codesigning disabled with --no-codesign, skipping IPA.
+2025-09-30T02:24:33.4982290Z ##[group]Run ls -la build/ios/ipa || true
+2025-09-30T02:24:33.4982830Z [36;1mls -la build/ios/ipa || true[0m
+2025-09-30T02:24:33.6318420Z shell: /bin/bash -e {0}
+2025-09-30T02:24:33.6318710Z env:
+2025-09-30T02:24:33.6318930Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:24:33.6320480Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:24:33.6321950Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:24:33.6322310Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:24:33.6322780Z ##[endgroup]
+2025-09-30T02:24:33.7024160Z ls: build/ios/ipa: No such file or directory
+2025-09-30T02:24:33.7102250Z ##[group]Run actions/upload-artifact@v4
+2025-09-30T02:24:33.7102540Z with:
+2025-09-30T02:24:33.7102800Z   name: ios-artifacts
+2025-09-30T02:24:33.7103040Z   path: build/ios/ipa
+build/ios/archive
+
+2025-09-30T02:24:33.7103300Z   if-no-files-found: warn
+2025-09-30T02:24:33.7103560Z   compression-level: 6
+2025-09-30T02:24:33.7103840Z   overwrite: false
+2025-09-30T02:24:33.7104060Z   include-hidden-files: false
+2025-09-30T02:24:33.7104300Z env:
+2025-09-30T02:24:33.7104600Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:24:33.7105940Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:24:33.7107700Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:24:33.7108190Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:24:33.7108440Z ##[endgroup]
+2025-09-30T02:24:34.0984900Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2025-09-30T02:24:34.0988780Z The least common ancestor is /Users/runner/work/JKH/JKH/build/ios. This will be the root directory of the artifact
+2025-09-30T02:24:34.0990270Z With the provided path, there will be 104 files uploaded
+2025-09-30T02:24:34.0998170Z Artifact name is valid!
+2025-09-30T02:24:34.1000230Z Root directory input is valid!
+2025-09-30T02:24:34.5974990Z Beginning upload of artifact content to blob storage
+2025-09-30T02:24:36.1243560Z Uploaded bytes 8388608
+2025-09-30T02:24:36.2246680Z Uploaded bytes 16777216
+2025-09-30T02:24:37.0688650Z Uploaded bytes 25165824
+2025-09-30T02:24:37.0989560Z Uploaded bytes 33554432
+2025-09-30T02:24:37.8754330Z Uploaded bytes 41943040
+2025-09-30T02:24:38.9442250Z Uploaded bytes 50331648
+2025-09-30T02:24:39.6476740Z Uploaded bytes 58720256
+2025-09-30T02:24:39.8116540Z Uploaded bytes 61384123
+2025-09-30T02:24:39.8937840Z Finished uploading artifact content to blob storage!
+2025-09-30T02:24:39.8980870Z SHA256 digest of uploaded artifact zip is be7e54aa65e362df626044226440b0efcb32573d8a01ec9d17231335d5552924
+2025-09-30T02:24:39.9002300Z Finalizing artifact upload
+2025-09-30T02:24:40.2147470Z Artifact ios-artifacts.zip successfully finalized. Artifact ID 4138829420
+2025-09-30T02:24:40.2148070Z Artifact ios-artifacts has been successfully uploaded! Final size is 61384123 bytes. Artifact ID is 4138829420
+2025-09-30T02:24:40.2152890Z Artifact download URL: https://github.com/lakmalshakthi8-afk/JKH/actions/runs/18116559829/artifacts/4138829420
+2025-09-30T02:24:40.2256540Z Post job cleanup.
+2025-09-30T02:24:40.2331430Z Post job cleanup.
+2025-09-30T02:24:40.3666080Z [command]/opt/homebrew/bin/git version
+2025-09-30T02:24:40.3838660Z git version 2.50.1
+2025-09-30T02:24:40.4250600Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/260c4088-de68-4f4f-ad7c-b3b8ca2eab85/.gitconfig'
+2025-09-30T02:24:40.4367680Z Temporarily overriding HOME='/Users/runner/work/_temp/260c4088-de68-4f4f-ad7c-b3b8ca2eab85' before making global git config changes
+2025-09-30T02:24:40.4368290Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-30T02:24:40.4408090Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/JKH/JKH
+2025-09-30T02:24:40.4685900Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-30T02:24:40.4883610Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-30T02:24:40.5645310Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-30T02:24:40.5656060Z http.https://github.com/.extraheader
+2025-09-30T02:24:40.5701320Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-30T02:24:40.5965900Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-30T02:24:40.7210400Z Cleaning up orphan processes
+2025-09-30T02:24:41.1602780Z Terminate orphan process: pid (33054) (ibtoold)
+2025-09-30T02:24:41.2236020Z Terminate orphan process: pid (31281) (ibtoold)
+2025-09-30T02:24:41.2931930Z Terminate orphan process: pid (31220) (ibtoold)

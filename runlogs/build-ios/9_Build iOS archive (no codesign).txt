@@ -1,0 +1,36 @@
+﻿2025-09-30T02:19:39.5081820Z ##[group]Run # Build an unsigned IPA and an Xcode archive. `--no-codesign` allows building without credentials.
+2025-09-30T02:19:39.5083360Z [36;1m# Build an unsigned IPA and an Xcode archive. `--no-codesign` allows building without credentials.[0m
+2025-09-30T02:19:39.5084630Z [36;1mflutter build ipa --no-codesign --export-method ad-hoc --build-number=1 --build-name=1.0.0[0m
+2025-09-30T02:19:39.5162590Z shell: /bin/bash -e {0}
+2025-09-30T02:19:39.5162830Z env:
+2025-09-30T02:19:39.5163020Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:39.5164340Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:39.5175490Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:39.5175760Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:39.5175940Z ##[endgroup]
+2025-09-30T02:19:39.9771420Z Warning: Building for device with codesigning disabled. You will have to manually codesign before deploying to device.
+2025-09-30T02:19:46.3510560Z Archiving com.example.tfclassification...
+2025-09-30T02:19:46.4054460Z Updating minimum iOS deployment target to 13.0.
+2025-09-30T02:19:46.4156510Z Upgrading project.pbxproj
+2025-09-30T02:19:46.4257940Z Upgrading AppFrameworkInfo.plist
+2025-09-30T02:19:46.4375040Z Upgrading Podfile
+2025-09-30T02:19:46.4476640Z Upgrading Runner.xcscheme
+2025-09-30T02:23:22.2893470Z Running pod install...                                            214.5s
+2025-09-30T02:24:32.4488870Z Running Xcode build...                                          
+2025-09-30T02:24:32.4494300Z Xcode archive done.                                         70.1s
+2025-09-30T02:24:33.3653200Z ✓ Built build/ios/archive/Runner.xcarchive (183.5MB)
+2025-09-30T02:24:33.4606970Z 
+2025-09-30T02:24:33.4608300Z [!] App Settings Validation
+2025-09-30T02:24:33.4611570Z     • Version Number: 1.0.0
+2025-09-30T02:24:33.4612510Z     • Build Number: 1
+2025-09-30T02:24:33.4613580Z     • Display Name: Vestaigrade
+2025-09-30T02:24:33.4614540Z     • Deployment Target: 13.0
+2025-09-30T02:24:33.4615510Z     • Bundle Identifier: com.example.tfclassification
+2025-09-30T02:24:33.4616930Z     ! Your application still contains the default "com.example" bundle identifier.
+2025-09-30T02:24:33.4617740Z 
+2025-09-30T02:24:33.4618270Z [!] App Icon and Launch Image Assets Validation
+2025-09-30T02:24:33.4648040Z     ! Launch image is set to the default placeholder icon. Replace with unique launch image.
+2025-09-30T02:24:33.4648410Z 
+2025-09-30T02:24:33.4649170Z To update the settings, please refer to https://flutter.dev/to/ios-deploy
+2025-09-30T02:24:33.4649400Z 
+2025-09-30T02:24:33.4649580Z Codesigning disabled with --no-codesign, skipping IPA.

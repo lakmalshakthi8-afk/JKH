@@ -1,0 +1,36 @@
+﻿2025-09-30T02:24:33.7102230Z ##[group]Run actions/upload-artifact@v4
+2025-09-30T02:24:33.7102530Z with:
+2025-09-30T02:24:33.7102790Z   name: ios-artifacts
+2025-09-30T02:24:33.7103030Z   path: build/ios/ipa
+build/ios/archive
+
+2025-09-30T02:24:33.7103300Z   if-no-files-found: warn
+2025-09-30T02:24:33.7103550Z   compression-level: 6
+2025-09-30T02:24:33.7103840Z   overwrite: false
+2025-09-30T02:24:33.7104060Z   include-hidden-files: false
+2025-09-30T02:24:33.7104300Z env:
+2025-09-30T02:24:33.7104590Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:24:33.7105930Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:24:33.7107520Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:24:33.7108180Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:24:33.7108430Z ##[endgroup]
+2025-09-30T02:24:34.0984840Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2025-09-30T02:24:34.0988760Z The least common ancestor is /Users/runner/work/JKH/JKH/build/ios. This will be the root directory of the artifact
+2025-09-30T02:24:34.0990270Z With the provided path, there will be 104 files uploaded
+2025-09-30T02:24:34.0998150Z Artifact name is valid!
+2025-09-30T02:24:34.1000220Z Root directory input is valid!
+2025-09-30T02:24:34.5974960Z Beginning upload of artifact content to blob storage
+2025-09-30T02:24:36.1243520Z Uploaded bytes 8388608
+2025-09-30T02:24:36.2246650Z Uploaded bytes 16777216
+2025-09-30T02:24:37.0688600Z Uploaded bytes 25165824
+2025-09-30T02:24:37.0989510Z Uploaded bytes 33554432
+2025-09-30T02:24:37.8754290Z Uploaded bytes 41943040
+2025-09-30T02:24:38.9442150Z Uploaded bytes 50331648
+2025-09-30T02:24:39.6476690Z Uploaded bytes 58720256
+2025-09-30T02:24:39.8116500Z Uploaded bytes 61384123
+2025-09-30T02:24:39.8937810Z Finished uploading artifact content to blob storage!
+2025-09-30T02:24:39.8980830Z SHA256 digest of uploaded artifact zip is be7e54aa65e362df626044226440b0efcb32573d8a01ec9d17231335d5552924
+2025-09-30T02:24:39.9002280Z Finalizing artifact upload
+2025-09-30T02:24:40.2147450Z Artifact ios-artifacts.zip successfully finalized. Artifact ID 4138829420
+2025-09-30T02:24:40.2148070Z Artifact ios-artifacts has been successfully uploaded! Final size is 61384123 bytes. Artifact ID is 4138829420
+2025-09-30T02:24:40.2152880Z Artifact download URL: https://github.com/lakmalshakthi8-afk/JKH/actions/runs/18116559829/artifacts/4138829420

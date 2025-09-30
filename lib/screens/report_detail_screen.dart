@@ -5,6 +5,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
+import 'package:mailer/smtp_server.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:vestaigrade/utils/library_model.dart';
@@ -20,6 +22,7 @@ class ReportDetailScreen extends StatefulWidget {
 
 class _ReportDetailScreenState extends State<ReportDetailScreen> {
   bool isLoading = false;
+  final _secureStorage = const FlutterSecureStorage();
   Future<void> _share() async {
     final appDirectory = await getApplicationDocumentsDirectory();
     final db = TinyDb(JsonStorage("${appDirectory.path}/supplier.json"));
@@ -80,13 +83,20 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
         await table2.get(where('name').equals(widget.library.supplier));
     await db2.close();
 
-    final password = dotenv.env['EMAILPASSWORD'] ??
-        ''; //change the password and user name in the .env file
-    final username = dotenv.env['EMAIL'] ?? '';
+  final password = await _secureStorage.read(key: 'smtp_password') ?? dotenv.env['EMAILPASSWORD'] ?? '';
+  final username = await _secureStorage.read(key: 'smtp_username') ?? dotenv.env['EMAIL'] ?? '';
+  final host = await _secureStorage.read(key: 'smtp_host') ?? dotenv.env['SMTP_HOST'] ?? 'smtp.gmail.com';
+  final portStr = await _secureStorage.read(key: 'smtp_port') ?? dotenv.env['SMTP_PORT'] ?? '587';
+  final port = int.tryParse(portStr) ?? 587;
     if (emails.isNotEmpty && supplier != null) {
       final sendTo = emails.map((item) => item['email'] as String).toList();
 // Example: Gmail SMTP (change for other providers)
-      final smtpServer = gmail(username, password);
+      final SmtpServer smtpServer;
+      if (host.contains('gmail')) {
+        smtpServer = gmail(username, password);
+      } else {
+        smtpServer = SmtpServer(host, username: username, password: password, port: port);
+      }
 
       // Build the message
       // Create HTML table for email

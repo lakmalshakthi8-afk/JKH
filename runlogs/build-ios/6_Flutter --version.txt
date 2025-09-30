@@ -1,0 +1,13 @@
+﻿2025-09-30T02:19:24.0772520Z ##[group]Run flutter --version
+2025-09-30T02:19:24.0772970Z [36;1mflutter --version[0m
+2025-09-30T02:19:24.1192610Z shell: /bin/bash -e {0}
+2025-09-30T02:19:24.1192960Z env:
+2025-09-30T02:19:24.1193170Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:24.1194760Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:24.1196430Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:24.1196880Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:24.1197120Z ##[endgroup]
+2025-09-30T02:19:24.7553390Z Flutter 3.35.5 • channel stable • https://github.com/flutter/flutter.git
+2025-09-30T02:19:24.7627120Z Framework • revision ac4e799d23 (3 days ago) • 2025-09-26 12:05:09 -0700
+2025-09-30T02:19:24.7628290Z Engine • hash 0274ead41f6265309f36e9d74bc8c559becd5345 (revision d3d45dcf25) (3 days ago) • 2025-09-26 16:45:18.000Z
+2025-09-30T02:19:24.7628810Z Tools • Dart 3.9.2 • DevTools 2.48.0

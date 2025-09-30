@@ -1,0 +1,35 @@
+﻿2025-09-30T02:16:54.4693920Z ##[group]Run ruby/setup-ruby@v1
+2025-09-30T02:16:54.4694230Z with:
+2025-09-30T02:16:54.4694360Z   ruby-version: 2.7
+2025-09-30T02:16:54.4694490Z   bundler-cache: false
+2025-09-30T02:16:54.4694890Z env:
+2025-09-30T02:16:54.4695010Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:16:54.4695150Z ##[endgroup]
+2025-09-30T02:16:54.6567300Z ##[group]Modifying PATH
+2025-09-30T02:16:54.6575290Z Entries removed from PATH to avoid conflicts with default Ruby:
+2025-09-30T02:16:54.6579090Z   /opt/homebrew/lib/ruby/gems/3.3.0/bin
+2025-09-30T02:16:54.6579760Z   /opt/homebrew/opt/ruby@3.3/bin
+2025-09-30T02:16:54.6584210Z Entries added to PATH to use selected Ruby:
+2025-09-30T02:16:54.6584870Z   /Users/runner/hostedtoolcache/Ruby/2.7.8/arm64/bin
+2025-09-30T02:16:54.6593240Z ##[endgroup]
+2025-09-30T02:16:54.6609250Z ##[group]Downloading Ruby
+2025-09-30T02:16:54.6610550Z https://github.com/ruby/ruby-builder/releases/download/ruby-2.7.8/ruby-2.7.8-darwin-arm64.tar.gz
+2025-09-30T02:16:55.1138430Z Took   0.44 seconds
+2025-09-30T02:16:55.1244390Z ##[endgroup]
+2025-09-30T02:16:55.1349440Z ##[group]Extracting  Ruby
+2025-09-30T02:16:55.1451840Z [command]/usr/bin/tar -xz -C /Users/runner/hostedtoolcache/Ruby/2.7.8 -f /Users/runner/work/_temp/cb1625d4-f268-4b98-a6f5-f7ee6f59056a
+2025-09-30T02:16:55.8102770Z Took   0.71 seconds
+2025-09-30T02:16:55.8104650Z ##[endgroup]
+2025-09-30T02:16:55.8105430Z ##[group]Print Ruby version
+2025-09-30T02:16:55.8126010Z [command]/Users/runner/hostedtoolcache/Ruby/2.7.8/arm64/bin/ruby --version
+2025-09-30T02:16:55.8215120Z ruby 2.7.8p225 (2023-03-30 revision 1f4d455848) [arm64-darwin22]
+2025-09-30T02:16:55.8225990Z Took   0.01 seconds
+2025-09-30T02:16:55.8227110Z ##[endgroup]
+2025-09-30T02:16:55.8228120Z ##[group]Installing Bundler
+2025-09-30T02:16:55.8228980Z Using latest Bundler for ruby-2.7.8 because the default Bundler gem is too old for that Ruby version
+2025-09-30T02:16:55.8230090Z Ruby 2.6-2.7 only works with Bundler 2.4
+2025-09-30T02:16:55.8235220Z [command]/Users/runner/hostedtoolcache/Ruby/2.7.8/arm64/bin/gem install bundler -v ~> 2.4.0
+2025-09-30T02:17:18.9130580Z Successfully installed bundler-2.4.22
+2025-09-30T02:17:18.9232800Z 1 gem installed
+2025-09-30T02:17:19.0776990Z Took  23.25 seconds
+2025-09-30T02:17:19.0857590Z ##[endgroup]

@@ -46,6 +46,7 @@ dependencies:
   share_plus: ^11.0.0
   dio: ^5.9.0
   mailer: ^6.5.0
+  flutter_secure_storage: ^9.0.2
   flutter_dotenv: ^6.0.0
   # Firebase core (add other firebase packages as needed)
   firebase_core: ^2.10.0

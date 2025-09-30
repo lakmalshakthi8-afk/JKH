@@ -1,0 +1,12 @@
+﻿2025-09-30T02:19:36.9831270Z ##[group]Run # Ensure CocoaPods repo is available
+2025-09-30T02:19:36.9831680Z [36;1m# Ensure CocoaPods repo is available[0m
+2025-09-30T02:19:36.9831940Z [36;1mpod --version || sudo gem install cocoapods[0m
+2025-09-30T02:19:36.9832220Z [36;1mpod repo update || true[0m
+2025-09-30T02:19:37.0753710Z shell: /bin/bash -e {0}
+2025-09-30T02:19:37.0754030Z env:
+2025-09-30T02:19:37.0754170Z   FLUTTER_CHANNEL: stable
+2025-09-30T02:19:37.0755450Z   PATH: /Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-09-30T02:19:37.0756950Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.35.5-arm64
+2025-09-30T02:19:37.0757360Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-09-30T02:19:37.0757540Z ##[endgroup]
+2025-09-30T02:19:37.9721320Z 1.16.2

@@ -7,6 +7,7 @@ import 'package:tiny_db/tiny_db.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class ManageEmails extends StatefulWidget {
   const ManageEmails({super.key});
@@ -18,18 +19,38 @@ class ManageEmails extends StatefulWidget {
 class _ManageEmailsState extends State<ManageEmails> {
   final _emailController = TextEditingController();
   final _descriptionController = TextEditingController();
+  final _smtpEmailController = TextEditingController();
+  final _smtpPasswordController = TextEditingController();
+  final _smtpHostController = TextEditingController(text: 'smtp.gmail.com');
+  final _smtpPortController = TextEditingController(text: '587');
+  final _secureStorage = const FlutterSecureStorage();
   TinyDb? db;
 
   Future<String> _sendEmail(String toEmail) async {
     try {
-      final password = dotenv.env['EMAILPASSWORD'] ?? '';
-      final username = dotenv.env['EMAIL'] ?? '';
+    // Prefer secure storage; fallback to dotenv for dev
+    final password = await _secureStorage.read(key: 'smtp_password') ??
+      dotenv.env['EMAILPASSWORD'] ?? '';
+    final username = await _secureStorage.read(key: 'smtp_username') ??
+      dotenv.env['EMAIL'] ?? '';
+    final host = await _secureStorage.read(key: 'smtp_host') ??
+      dotenv.env['SMTP_HOST'] ?? 'smtp.gmail.com';
+    final portStr = await _secureStorage.read(key: 'smtp_port') ??
+      dotenv.env['SMTP_PORT'] ?? '587';
+    final port = int.tryParse(portStr) ?? 587;
 
       if (password.isEmpty || username.isEmpty) {
         return 'Error: Email configuration not found';
       }
 
-      final smtpServer = gmail(username, password);
+      // Create smtp server from host/port; use Gmail helper when host matches
+      final SmtpServer smtpServer;
+      if (host.contains('gmail')) {
+        smtpServer = gmail(username, password);
+      } else {
+        smtpServer = SmtpServer(host,
+            username: username, password: password, port: port, ignoreBadCertificate: false);
+      }
 
       final message = Message()
         ..from = Address(username, 'VestaiGrade App')
@@ -43,6 +64,52 @@ class _ManageEmailsState extends State<ManageEmails> {
     } catch (e) {
       return 'Error sending email: ${e.toString()}';
     }
+  }
+
+  Future<void> _openSmtpSettings() async {
+    // Load existing values
+    _smtpEmailController.text = await _secureStorage.read(key: 'smtp_username') ?? dotenv.env['EMAIL'] ?? '';
+    _smtpPasswordController.text = await _secureStorage.read(key: 'smtp_password') ?? '';
+    _smtpHostController.text = await _secureStorage.read(key: 'smtp_host') ?? dotenv.env['SMTP_HOST'] ?? 'smtp.gmail.com';
+    _smtpPortController.text = await _secureStorage.read(key: 'smtp_port') ?? dotenv.env['SMTP_PORT'] ?? '587';
+
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (bottomSheetContext) => Padding(
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Container(
+            color: Colors.black54,
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  CustomTextFormField(controller: _smtpEmailController, label: 'SMTP Username (email)'),
+                  CustomTextFormField(controller: _smtpPasswordController, label: 'SMTP Password', obscureText: true),
+                  CustomTextFormField(controller: _smtpHostController, label: 'SMTP Host'),
+                  CustomTextFormField(controller: _smtpPortController, label: 'SMTP Port'),
+                  DefaultElevatedButton(
+                    title: 'Save SMTP Settings',
+                    onPressed: () async {
+                      await _secureStorage.write(key: 'smtp_username', value: _smtpEmailController.text);
+                      await _secureStorage.write(key: 'smtp_password', value: _smtpPasswordController.text);
+                      await _secureStorage.write(key: 'smtp_host', value: _smtpHostController.text);
+                      await _secureStorage.write(key: 'smtp_port', value: _smtpPortController.text);
+                      if (bottomSheetContext.mounted) Navigator.pop(bottomSheetContext);
+                      Fluttertoast.showToast(msg: 'SMTP settings saved securely');
+                    },
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   Future<void> _saveEmail() async {
