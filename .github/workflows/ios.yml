@@ -58,3 +58,107 @@ jobs:
           path: |
             build/ios/ipa
             build/ios/archive
+
+  build-simulator:
+    runs-on: macos-latest
+    env:
+      FLUTTER_CHANNEL: stable
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_CHANNEL }}
+
+      - name: Flutter --version
+        run: flutter --version
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Build iOS for simulator
+        run: |
+          # Build an iOS simulator app bundle
+          flutter build ios --simulator --no-codesign --build-number=1 --build-name=1.0.0
+
+      - name: Package simulator app
+        run: |
+          set -e
+          SIM_APP_PATH="build/ios/iphonesimulator/Runner.app"
+          if [ -d "$SIM_APP_PATH" ]; then
+            ZIP_PATH="build/ios/Runner-simulator.zip"
+            cd build/ios
+            zip -r Runner-simulator.zip iphonesimulator/Runner.app
+            cd -
+          else
+            echo "Simulator app not found at $SIM_APP_PATH"
+            exit 1
+          fi
+
+      - name: Upload simulator artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-simulator-artifact
+          path: build/ios/Runner-simulator.zip
+
+  build-ios-signed:
+    runs-on: macos-latest
+    env:
+      FLUTTER_CHANNEL: stable
+    needs: build-ios
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Homebrew dependencies
+        run: |
+          brew update || true
+          brew install cocoapods || true
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_CHANNEL }}
+
+      - name: Flutter --version
+        run: flutter --version
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Decode and install signing certificate
+        env:
+          P12_PASS: ${{ secrets.APPLE_P12_PASSWORD }}
+          KEYCHAIN_PASS: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          echo "$KEYCHAIN_PASS" > /tmp/keychain_pass || true
+          echo "$P12_PASS" > /tmp/p12_pass || true
+          echo "Decoding P12..."
+          echo "${{ secrets.APPLE_P12 }}" | base64 --decode > signing.p12
+          security create-keychain -p "$KEYCHAIN_PASS" build.keychain
+          security import signing.p12 -k ~/Library/Keychains/build.keychain -P "$P12_PASS" -T /usr/bin/codesign || true
+          security list-keychains -s ~/Library/Keychains/build.keychain
+          security default-keychain -s ~/Library/Keychains/build.keychain
+          security unlock-keychain -p "$KEYCHAIN_PASS" ~/Library/Keychains/build.keychain
+
+      - name: Install provisioning profile
+        run: |
+          echo "Decoding provisioning profile..."
+          echo "${{ secrets.APPLE_PROV_PROFILE }}" | base64 --decode > profile.mobileprovision
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/${{ secrets.BUNDLE_ID }}.mobileprovision
+
+      - name: Build signed IPA
+        env:
+          TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          # Build and sign IPA using installed cert + provisioning profile
+          flutter build ipa --export-method app-store --build-number=1 --build-name=1.0.0
+
+      - name: Upload signed IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-signed-ipa
+          path: build/ios/ipa
