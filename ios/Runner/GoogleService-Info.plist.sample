@@ -1,0 +1,13 @@
+// SAMPLE: Do NOT use this file as-is.
+// Download the real GoogleService-Info.plist from the Firebase Console for your iOS app
+// and place it at ios/Runner/GoogleService-Info.plist before building for iOS.
+
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Your actual GoogleService-Info.plist contents go here -->
+</dict>
+</plist>
+-->
