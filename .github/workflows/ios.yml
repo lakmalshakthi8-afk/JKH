@@ -1,0 +1,60 @@
+name: Build iOS
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    env:
+      FLUTTER_CHANNEL: stable
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby (for CocoaPods)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: Install Homebrew dependencies
+        run: |
+          brew update || true
+          brew install cocoapods || true
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_CHANNEL }}
+
+      - name: Flutter --version
+        run: flutter --version
+
+      - name: Install dependencies
+        run: |
+          flutter pub get
+
+      - name: Prepare iOS pods
+        working-directory: ios
+        run: |
+          # Ensure CocoaPods repo is available
+          pod --version || sudo gem install cocoapods
+          pod repo update || true
+
+      - name: Build iOS archive (no codesign)
+        run: |
+          # Build an unsigned IPA and an Xcode archive. `--no-codesign` allows building without credentials.
+          flutter build ipa --no-codesign --export-method ad-hoc --build-number=1 --build-name=1.0.0
+
+      - name: List output
+        run: ls -la build/ios/ipa || true
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-artifacts
+          path: |
+            build/ios/ipa
+            build/ios/archive
